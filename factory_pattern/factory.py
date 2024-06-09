@@ -7,4 +7,4 @@ class AnimalFactory:
         elif animal_type == "Cat":
             return Cat()
         else:
-            raise ValueError(f"Unknown animal type: {animal_type}")
+            raise ValueError(f"Unknown animal type: {animal_type}") 
