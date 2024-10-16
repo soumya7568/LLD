@@ -42,7 +42,7 @@ class Game:
         
         cell = self.board.get_cell(pos)
         if cell.jump and cell.jump.start==pos:
-            jumpby = "ladder" if cell.jump.end > cell.jump.start else "ladder"
+            jumpby = "ladder" if cell.jump.end > cell.jump.start else "snake"
             print(f"player is jumping by {jumpby}")
             return cell.jump.end
         

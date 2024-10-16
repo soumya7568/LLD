@@ -38,7 +38,7 @@ class Board:
             tail = max(num1,num2)
             head = min(num1,num2)
             ladder = Jump(head,tail)
-            cell = self.get_cell(head)
+            cell = self.get_cell(tail)
             if cell.jump:
                 continue
             cell.jump = ladder
