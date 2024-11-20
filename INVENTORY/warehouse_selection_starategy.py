@@ -7,7 +7,7 @@ class WareHouseSelectionStrategy(ABC):
     
 class NearestWarehouseStrategy(WareHouseSelectionStrategy):
     def select_warehouse(self, warehouses):
-        return min(warehouses, key=lambda warehouse: warehouse.address.zip_code)
+        return warehouses.get('10001')
     
 class CheapestWarehouseStrategy(WareHouseSelectionStrategy):
     def select_warehouse(self, warehouses):

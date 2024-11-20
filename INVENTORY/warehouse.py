@@ -6,6 +6,9 @@ class Warehouse():
         self.inventory = Inventory()
         self.address = address
         
+    def get_product_from_id(self,pid):
+        return self.inventory.get_product(pid)
+        
     def add_product_to_inventory(self, product):
         self.inventory.add_product(product)
         

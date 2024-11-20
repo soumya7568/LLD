@@ -1,12 +1,15 @@
+from product import Product
+from collections import defaultdict
+
 class Inventory:
     def __init__(self):
         self.id_product_map = dict()
-        self.product_id_quantity_map = dict()
+        self.product_id_quantity_map = defaultdict(int)
         
-    def add_product(self, product):
+    def add_product(self, product:Product):
         self.id_product_map[product.product_id] = product
         
-    def remove_product(self, product):
+    def remove_product(self, product:Product):
         del self.id_product_map[product.product_id]
         
     def get_product(self, product_id):
@@ -18,3 +21,6 @@ class Inventory:
         else:
             self.product_id_quantity_map[product_id] -= quantity
         return self.product_id_quantity_map[product_id]
+    
+    def show_all_products(self):
+        return self.id_product_map

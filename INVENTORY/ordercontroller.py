@@ -8,7 +8,7 @@ class OrderController:
         
     def create_order(self, user,warehouse):
         self.order_count += 1
-        new_order = Order(user,warehouse)
+        new_order = Order(self.order_count,user,warehouse)
         self.orders[self.order_count] = new_order
         self.userid_order_map[user.user_id].append(new_order)
         return new_order
