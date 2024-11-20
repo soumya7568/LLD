@@ -1,11 +1,13 @@
+from product import Product
+
 class Cart:
     def __init__(self):
         self.products = dict()
         
-    def add_product(self, product, quantity):
+    def add_product(self, product:Product, quantity):
         self.products[product.product_id] = quantity
     
-    def remove_product(self, product,quantity):
+    def remove_product(self, product:Product,quantity):
         self.products[product.product_id] -= quantity
         if self.products[product.product_id] == 0:
             del self.products[product.product_id]
